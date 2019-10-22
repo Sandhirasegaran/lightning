@@ -1,0 +1,13 @@
+<!--
+* Cms_CompFieldLabel Component
+* Author: M.Sandhirasegaran
+* Date: 20th Sept'17
+* Component used to display field label of specified object api name and field api name
+Eg: <c:Cms_CompFieldLabel componentObjectName="Account" componentFieldName="NumberOfEmployees" />
+{!$ObjectType.Account.fields.NumberOfEmployees.Label}
+-->
+<apex:component controller="CmsCtlFieldLabel">
+    <apex:attribute name="componentObjectName" type="String" description="Used to get field label based on object api name" required="true" assignTo="{!objectName}" />
+    <apex:attribute name="componentFieldName" type="String" description="Used to get field label based on field api name" required="true" assignTo="{!fieldName}" />
+    <apex:outputText value="{!ObjFieldLabel}"/>
+</apex:component>
