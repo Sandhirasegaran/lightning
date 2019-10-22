@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute access="public" name="empName" type="String" default="enter name" description="enter your name" required="true" />
+    <aura:attribute access="public" name="empAddress" type="String" default="enter address" description="enter your address" required="true" />
+    Employee Name: {!v.empName}<br />
+    Employee Address: {!v.empAddress}<br />
+</aura:component>

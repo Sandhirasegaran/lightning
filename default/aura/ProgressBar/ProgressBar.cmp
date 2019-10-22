@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <div class="slds-progress-bar slds-progress-bar_circular slds-progress-bar_large" aria-valuemin="0" aria-valuemax="20" aria-valuenow="9.82" role="progressbar">
+        <span class="slds-progress-bar__value" style="width: 49.1%;">
+            <span class="slds-assistive-text">Progress: 49.1%</span>
+        </span>
+    </div>
+</aura:component>

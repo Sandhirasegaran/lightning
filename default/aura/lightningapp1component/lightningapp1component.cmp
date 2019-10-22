@@ -1,0 +1,8 @@
+<aura:component Access="public" Extensible="true">
+    <ui:inputText label="Enter Name" placeHolder="Employee Name" aura:id="name" />
+    <ui:inputText label="My Name" aura:id="myname" />
+    <ui:button label="submit" press="{!c.callme}" />
+    <ui:inputText label="Name" placeHolder="First, Last" aura:id="fname" />
+    <ui:button aura:id="outputButton" label="Submit1" press="{!c.callagain}" />
+    <ui:outputText value="Print Name" aura:id="fnameOutput" />
+</aura:component>

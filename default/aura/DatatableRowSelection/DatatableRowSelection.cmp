@@ -1,0 +1,45 @@
+<aura:component >
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="5"/>
+    <aura:attribute name="selection" type="List" access="PRIVATE"/>
+    <aura:attribute name="rowKeys" type="List" access="PRIVATE"/>
+    <aura:attribute name="selectedRows" type="List" access="PRIVATE"/>
+
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <!--aura:import library="lightningcomponentdemo:mockdataFaker" property="mockdataLibrary"/-->
+
+
+    <div class="slds-p-around_medium slds-form">
+        <div class="slds-scrollable_y slds-m-bottom_small" style="height: 300px">
+            <lightning:checkboxGroup
+                    label="Row keys:"
+                    value="{! v.selection }"
+                    onchange="{! c.handleGroupChange }"
+                    options="{! v.rowKeys }"
+            />
+        </div>
+        <div class="slds-form-element">
+            <lightning:button
+                    label="Update selectedRows"
+                    variant="brand"
+                    onclick="{! c.updateRowSelection }"
+            />
+        </div>
+    </div>
+
+    <!-- the container element determine the height of the datatable -->
+    <div style="height: 300px">
+        <lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            selectedRows="{! v.selectedRows }"
+            showRowNumberColumn="true"
+            maxRowSelection="{! v.maxRowSelection }"
+        />
+    </div>
+</aura:component>

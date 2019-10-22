@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <!--aura:attribute name="Get_Result" type="Integer" />
+    <aura:handler event="c:Result" action="{!c.getValueFromApplicationEvent}" /-->
+    
+    The result is
+</aura:component>

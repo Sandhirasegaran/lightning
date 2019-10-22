@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <aura:registerEvent name="loadMyEvent" type="c:Result" />
+    <p>Hello from Component 1</p>
+    <br />
+    <ui:inputNumber aura:id="input1" label="First value" required="true" />
+    <ui:inputNumber aura:id="input2" label="Second value" required="true" />
+    <ui:button label="Sum" press="{!c.Add}" />
+    <br />
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component access="public" extensible="true">
+    <aura:attribute access="public" name="aval" type="integer" required="true" />
+    <aura:attribute access="public" name="bval" type="integer" required="true" />
+    <aura:attribute access="public" name="cval" type="integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.add}" />
+    A value : {!v.aval} <br/>
+    B Value : {!v.bval} <br/>
+    Total : {!v.cval} <br/>
+    
+    <aura:iteration items="1,2,3,4,5" var="itm">
+		<div>Items:{!itm}</div>
+    </aura:iteration>
+</aura:component>
