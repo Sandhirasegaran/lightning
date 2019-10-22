@@ -1,5 +1,5 @@
 <apex:page >
-<h1>Help for the Candidate Object Testing1</h1>
+<h1>Help for the Candidate Object Testing3</h1>
 
 <p>The Candidate object is for identifying and tracking individual candidates for job positions.</p>
 <p>Sort candidates by Name, Location, Last Modified, and Prospect Rating.</p>
